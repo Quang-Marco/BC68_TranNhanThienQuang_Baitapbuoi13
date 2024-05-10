@@ -16,9 +16,539 @@
       integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
       crossorigin="anonymous"
     />
+
+    <!-- FontAwesome 6.2.0 CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
   </head>
 
-  <body>
+  <body class="bg-body-secondary">
+    <div class="container py-5">
+      <div class="d-flex align-items-start">
+        <div
+          class="nav flex-column nav-pills me-3"
+          id="v-pills-tab"
+          role="tablist"
+          aria-orientation="vertical"
+          style="width: 150px"
+        >
+          <button
+            class="nav-link active"
+            id="v-pills-home-tab"
+            data-bs-toggle="pill"
+            data-bs-target="#v-pills-home"
+            type="button"
+            role="tab"
+            aria-controls="v-pills-home"
+            aria-selected="true"
+          >
+            <i class="fa-solid fa-book text-warning"></i>
+            <i class="fa-solid fa-book-open d-none"></i>
+            Bài 1
+          </button>
+          <button
+            class="nav-link"
+            id="v-pills-profile-tab"
+            data-bs-toggle="pill"
+            data-bs-target="#v-pills-profile"
+            type="button"
+            role="tab"
+            aria-controls="v-pills-profile"
+            aria-selected="false"
+          >
+            <i class="fa-solid fa-book text-warning"></i>
+            <i class="fa-solid fa-book-open d-none"></i>
+            Bài 2
+          </button>
+          <button
+            class="nav-link"
+            id="v-pills-disabled-tab"
+            data-bs-toggle="pill"
+            data-bs-target="#v-pills-disabled"
+            type="button"
+            role="tab"
+            aria-controls="v-pills-disabled"
+            aria-selected="false"
+          >
+            <i class="fa-solid fa-book text-warning"></i>
+            <i class="fa-solid fa-book-open d-none"></i>
+            Bài 3
+          </button>
+          <button
+            class="nav-link"
+            id="v-pills-messages-tab"
+            data-bs-toggle="pill"
+            data-bs-target="#v-pills-messages"
+            type="button"
+            role="tab"
+            aria-controls="v-pills-messages"
+            aria-selected="false"
+          >
+            <i class="fa-solid fa-book text-warning"></i>
+            <i class="fa-solid fa-book-open d-none"></i>
+            Bài 4
+          </button>
+          <button
+            class="nav-link"
+            id="v-pills-settings-tab"
+            data-bs-toggle="pill"
+            data-bs-target="#v-pills-settings"
+            type="button"
+            role="tab"
+            aria-controls="v-pills-settings"
+            aria-selected="false"
+          >
+            <i class="fa-solid fa-book text-warning"></i>
+            <i class="fa-solid fa-book-open d-none"></i>
+            Bài 5
+          </button>
+        </div>
+        <div class="tab-content rounded bg-light" id="v-pills-tabContent">
+          <!-- Bài 1 -->
+
+          <div
+            class="tab-pane fade show active py-4"
+            id="v-pills-home"
+            role="tabpanel"
+            aria-labelledby="v-pills-home-tab"
+            tabindex="0"
+          >
+            <div class="container px-5">
+              <h2>💰 Tính tiền lương nhân viên</h2>
+              <div class="row py-4 mb-3">
+                <h3 class="text-center">Mô hình 3 khối</h3>
+                <div class="col-3">
+                  <ul>
+                    <li>Lương 1 ngày</li>
+                    <li>Số ngày làm</li>
+                  </ul>
+                </div>
+                <div class="col-6">
+                  <ul>
+                    <li>Bước 1: Tạo biến luongMotNgay, soNgayLam, tienLuong</li>
+                    <li>
+                      Bước 2: Tạo 2 input để người dùng nhập lương 1 ngày và số
+                      ngày làm, tạo button tính tiền lương, gắn sự kiện onclick
+                      cho button
+                    </li>
+                    <li>
+                      Bước 3: Khi người dùng nhập giá trị và click vào button,
+                      lấy value người dùng vừa nhập và gán cho luongMotNgay,
+                      soNgayLam
+                    </li>
+                    <li>
+                      Bước 4: Sử dụng công thức tính tiền lương: tienLuong =
+                      luongMotNgay * soNgayLam
+                    </li>
+                    <li>
+                      Bước 5: thay đổi nội dung của thẻ bằng innerHTML, in ra số
+                      tiền lương
+                    </li>
+                  </ul>
+                </div>
+                <div class="col-3">
+                  <ul>
+                    <li>Tiền lương nhân viên</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-6 mb-3">
+                  <input
+                    type="number"
+                    class="form-control"
+                    name=""
+                    id="luongMotNgay"
+                    aria-describedby="helpId"
+                    placeholder="Nhập lương 1 ngày"
+                  />
+                </div>
+                <div class="col-6 mb-3">
+                  <input
+                    type="number"
+                    class="form-control"
+                    name=""
+                    id="soNgayLam"
+                    aria-describedby="helpId"
+                    placeholder="Nhập số ngày làm"
+                  />
+                </div>
+              </div>
+              <button id="tienLuong" class="btn btn-primary">
+                Tính tiền lương
+              </button>
+              <div class="bg-secondary-subtle rounded p-3 mt-4">
+                <i
+                  class="fa-regular fa-hand-point-right text-warning fs-5 me-2"
+                ></i>
+                <p class="bai1 d-inline-block mb-0"></p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bài 2 -->
+
+          <div
+            class="tab-pane fade py-4"
+            id="v-pills-profile"
+            role="tabpanel"
+            aria-labelledby="v-pills-profile-tab"
+            tabindex="0"
+          >
+            <div class="container px-5">
+              <h2>📚 Tính giá trị trung bình</h2>
+              <div class="row py-4 mb-3">
+                <h3 class="text-center">Mô hình 3 khối</h3>
+                <div class="col-3">
+                  <ul>
+                    <li>Số thứ nhất</li>
+                    <li>Số thứ hai</li>
+                    <li>Số thứ ba</li>
+                    <li>Số thứ tư</li>
+                    <li>Số thứ năm</li>
+                  </ul>
+                </div>
+                <div class="col-6">
+                  <ul>
+                    <li>
+                      Bước 1: Tạo biến soThuNhat, soThuHai, soThuBa, soThuTu,
+                      soThuNam, soTrungBinh
+                    </li>
+                    <li>
+                      Bước 2: Tạo 5 input để người dùng nhập vào 5 số thực, tạo
+                      button tính trung bình, gắn sự kiện onclick cho button
+                    </li>
+                    <li>
+                      Bước 3: Khi người dùng nhập giá trị và click vào button,
+                      lấy value người dùng vừa nhập và gán cho soThuNhat,
+                      soThuHai, soThuBa, soThuTu, soThuNam
+                    </li>
+                    <li>
+                      Bước 4: Sử dụng công thức tính trung bình: soTrungBinh = (
+                      soThuNhat + soThuHai + soThuBa + soThuTu + soThuNam) / 5
+                    </li>
+                    <li>
+                      Bước 5: thay đổi nội dung của thẻ bằng innerHTML, in ra số
+                      trung bình
+                    </li>
+                  </ul>
+                </div>
+                <div class="col-3">
+                  <ul>
+                    <li>Số trung bình</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-4 mb-3">
+                  <input
+                    type="number"
+                    class="form-control"
+                    name=""
+                    id="soThuNhat"
+                    aria-describedby="helpId"
+                    placeholder="Nhập số thứ nhất"
+                  />
+                </div>
+                <div class="col-4 mb-3">
+                  <input
+                    type="number"
+                    class="form-control"
+                    name=""
+                    id="soThuHai"
+                    aria-describedby="helpId"
+                    placeholder="Nhập số thứ hai"
+                  />
+                </div>
+                <div class="col-4 mb-3">
+                  <input
+                    type="number"
+                    class="form-control"
+                    name=""
+                    id="soThuBa"
+                    aria-describedby="helpId"
+                    placeholder="Nhập số thứ ba"
+                  />
+                </div>
+                <div class="col-4 mb-3">
+                  <input
+                    type="number"
+                    class="form-control"
+                    name=""
+                    id="soThuTu"
+                    aria-describedby="helpId"
+                    placeholder="Nhập số thứ tư"
+                  />
+                </div>
+                <div class="col-4 mb-3">
+                  <input
+                    type="number"
+                    class="form-control"
+                    name=""
+                    id="soThuNam"
+                    aria-describedby="helpId"
+                    placeholder="Nhập số thứ năm"
+                  />
+                </div>
+              </div>
+              <button id="tinhTrungBinh" class="btn btn-primary">
+                Tính trung bình
+              </button>
+              <div class="bg-secondary-subtle rounded p-3 mt-4">
+                <i
+                  class="fa-regular fa-hand-point-right text-warning fs-5 me-2"
+                ></i>
+                <p class="bai2 d-inline-block mb-0"></p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bài 3 -->
+
+          <div
+            class="tab-pane fade py-4"
+            id="v-pills-disabled"
+            role="tabpanel"
+            aria-labelledby="v-pills-disabled-tab"
+            tabindex="0"
+          >
+            <div class="container px-5">
+              <h2>💱 Quy đổi tiền</h2>
+              <div class="row py-4 mb-3">
+                <h3 class="text-center">Mô hình 3 khối</h3>
+                <div class="col-3">
+                  <ul>
+                    <li>Số tiền USD</li>
+                  </ul>
+                </div>
+                <div class="col-6">
+                  <ul>
+                    <li>Bước 1: Tạo biến tienUSD, tienVND</li>
+                    <li>
+                      Bước 2: Tạo 1 input để người dùng nhập số tiền USD, tạo
+                      button quy đổi tiền, gắn sự kiện onclick cho button
+                    </li>
+                    <li>
+                      Bước 3: Khi người dùng nhập giá trị và click vào button,
+                      lấy value người dùng vừa nhập và gán cho tienUSD
+                    </li>
+                    <li>
+                      Bước 4: Sử dụng công thức quy đổi tiền: tienVND = tienUSD
+                      * 23500
+                    </li>
+                    <li>
+                      Bước 5: thay đổi nội dung của thẻ bằng innerHTML, in ra số
+                      tiền VND
+                    </li>
+                  </ul>
+                </div>
+                <div class="col-3">
+                  <ul>
+                    <li>Số tiền VND</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-6 mb-3">
+                  <input
+                    type="number"
+                    class="form-control"
+                    name=""
+                    id="tienUSD"
+                    aria-describedby="helpId"
+                    placeholder="Nhập số tiền USD"
+                  />
+                </div>
+              </div>
+              <button id="quyDoiTien" class="btn btn-primary">
+                Quy đổi tiền
+              </button>
+              <div class="bg-secondary-subtle rounded p-3 mt-4">
+                <i
+                  class="fa-regular fa-hand-point-right text-warning fs-5 me-2"
+                ></i>
+                <p class="bai3 d-inline-block mb-0"></p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bài 4 -->
+
+          <div
+            class="tab-pane fade py-4"
+            id="v-pills-messages"
+            role="tabpanel"
+            aria-labelledby="v-pills-messages-tab"
+            tabindex="0"
+          >
+            <div class="container px-5">
+              <h2>📏 Tính diện tích, chu vi hình chữ nhật</h2>
+              <div class="row py-4 mb-3">
+                <h3 class="text-center">Mô hình 3 khối</h3>
+                <div class="col-3">
+                  <ul>
+                    <li>Chiều dài hình chữ nhật</li>
+                    <li>Chiều rộng hình chữ nhật</li>
+                  </ul>
+                </div>
+                <div class="col-6">
+                  <ul>
+                    <li>
+                      Bước 1: Tạo biến chieuDai, chieuRong, dienTich, chuVi
+                    </li>
+                    <li>
+                      Bước 2: Tạo 2 input để người dùng nhập chiều dài và chiều
+                      rộng của hình chữ nhật, tạo button tính diện tích và chu
+                      vi, gắn sự kiện onclick cho button
+                    </li>
+                    <li>
+                      Bước 3: Khi người dùng nhập giá trị và click vào button,
+                      lấy value người dùng vừa nhập và gán cho chieuDai,
+                      chieuRong
+                    </li>
+                    <li>
+                      Bước 4: Sử dụng công thức tính diện tích: dienTich =
+                      chieuDai * chieuRong
+                    </li>
+                    <li>
+                      Bước 5: Sử dụng công thức tính chu vi: chuVi = (chieuDai +
+                      chieuRong) * 2
+                    </li>
+                    <li>
+                      Bước 6: thay đổi nội dung của thẻ bằng innerHTML, in ra
+                      diện tích và chu vi hình chữ nhật
+                    </li>
+                  </ul>
+                </div>
+                <div class="col-3">
+                  <ul>
+                    <li>Diện tích hình chữ nhật</li>
+                    <li>Chu vi hình chữ nhật</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-6 mb-3">
+                  <input
+                    type="number"
+                    class="form-control"
+                    name=""
+                    id="chieuDai"
+                    aria-describedby="helpId"
+                    placeholder="Nhập chiều dài hình chữ nhật"
+                  />
+                </div>
+                <div class="col-6 mb-3">
+                  <input
+                    type="number"
+                    class="form-control"
+                    name=""
+                    id="chieuRong"
+                    aria-describedby="helpId"
+                    placeholder="Nhập chiều rộng hình chữ nhật"
+                  />
+                </div>
+              </div>
+              <button id="tinhDienTichChuVi" class="btn btn-primary">
+                Tính diện tích và chu vi
+              </button>
+              <div class="bg-secondary-subtle rounded p-3 mt-4">
+                <i
+                  class="fa-regular fa-hand-point-right text-warning fs-5 me-2"
+                ></i>
+                <p class="bai4 d-inline-block mb-0"></p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bài 5 -->
+
+          <div
+            class="tab-pane fade py-4"
+            id="v-pills-settings"
+            role="tabpanel"
+            aria-labelledby="v-pills-settings-tab"
+            tabindex="0"
+          >
+            <div class="container px-5">
+              <h2>🧮 Tính tổng 2 ký số</h2>
+              <div class="row py-4 mb-3">
+                <h3 class="text-center">Mô hình 3 khối</h3>
+                <div class="col-3">
+                  <ul>
+                    <li>Số có 2 chữ số</li>
+                  </ul>
+                </div>
+                <div class="col-6">
+                  <ul>
+                    <li>
+                      Bước 1: Tạo biến soHaiChuSo, chuSoHangChuc,
+                      chuSoHangDonVi, tongHaiChuSo
+                    </li>
+                    <li>
+                      Bước 2: Tạo 1 input để người dùng nhập số có 2 chữ số, tạo
+                      button tính tổng, gắn sự kiện onclick cho button
+                    </li>
+                    <li>
+                      Bước 3: Khi người dùng nhập giá trị và click vào button,
+                      lấy value người dùng vừa nhập và gán cho soHaiChuSo
+                    </li>
+                    <li>
+                      Bước 4: Sử dụng công thức tính chữ số hàng chục:
+                      chuSoHangChuc = Math.floor(soHaiChuSo / 10)
+                    </li>
+                    <li>
+                      Bước 5: Sử dụng công thức tính chữ số hàng đơn vị:
+                      chuSoHangDonVi = soHaiChuSo % 10
+                    </li>
+                    <li>
+                      Bước 6: Sử dụng công thức tính tổng 2 chữ số: tongHaiChuSo
+                      = chuSoHangChuc + chuSoHangDonVi
+                    </li>
+                    <li>
+                      Bước 7: thay đổi nội dung của thẻ bằng innerHTML, in ra
+                      tổng 2 chữ số
+                    </li>
+                  </ul>
+                </div>
+                <div class="col-3">
+                  <ul>
+                    <li>Tổng 2 chữ số</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-6 mb-3">
+                  <input
+                    type="number"
+                    class="form-control"
+                    name=""
+                    id="soHaiChuSo"
+                    aria-describedby="helpId"
+                    placeholder="Nhập số có 2 chữ số"
+                  />
+                </div>
+              </div>
+              <button id="tinhTong" class="btn btn-primary">
+                Tính tổng 2 ký số
+              </button>
+              <div class="bg-secondary-subtle rounded p-3 mt-4">
+                <i
+                  class="fa-regular fa-hand-point-right text-warning fs-5 me-2"
+                ></i>
+                <p class="bai5 d-inline-block mb-0"></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <!-- Bootstrap JavaScript Libraries -->
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
