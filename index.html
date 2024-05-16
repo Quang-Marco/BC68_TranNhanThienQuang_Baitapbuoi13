@@ -9,6 +9,19 @@
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
 
+    <!-- GG Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Favicon -->
     <link
       rel="shortcut icon"
       href="https://thumbs.dreamstime.com/b/javascript-icon-logo-javascript-often-abbreviated-as-js-programming-language-conforms-to-ecmascript-specification-204759326.jpg"
@@ -31,17 +44,51 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+
+    <!-- Style CSS -->
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        font-family: "Oswald", sans-serif;
+      }
+
+      body {
+        background: url(https://gcs.tripi.vn/public-tripi/tripi-feed/img/474098koW/background-nen-xam-dep_101024709.jpg)
+          center / cover;
+      }
+
+      .container h2 {
+        font-family: "Pacifico", cursive;
+        color: rgb(29, 29, 214);
+      }
+
+      .tab-content {
+        background: url(https://gcs.tripi.vn/public-tripi/tripi-feed/img/474098iAb/background-slide-mau-xam-dep_101024920.jpg)
+          center / cover;
+      }
+
+      .nav-link {
+        background-color: rgb(233, 236, 239);
+        width: 120px;
+        margin-bottom: 10px;
+      }
+
+      .d-inline-block {
+        color: rgb(29, 29, 214);
+      }
+    </style>
   </head>
 
-  <body class="bg-body-secondary">
+  <body>
     <div class="container p-5">
       <div class="d-flex align-items-start">
         <div
-          class="nav flex-column nav-pills me-3 mt-4"
+          class="nav flex-column nav-pills me-3"
           id="v-pills-tab"
           role="tablist"
           aria-orientation="vertical"
-          style="width: 150px"
         >
           <button
             class="nav-link active"
@@ -114,7 +161,7 @@
             Bài 5
           </button>
         </div>
-        <div class="tab-content rounded bg-light" id="v-pills-tabContent">
+        <div class="tab-content rounded-4" id="v-pills-tabContent">
           <!-- Bài 1 -->
 
           <div
@@ -164,7 +211,7 @@
                 </div>
               </div>
               <div class="row">
-                <div class="col-6 mb-3">
+                <div class="col-4 mb-3">
                   <input
                     type="number"
                     class="form-control"
@@ -174,7 +221,7 @@
                     placeholder="Nhập lương 1 ngày"
                   />
                 </div>
-                <div class="col-6 mb-3">
+                <div class="col-4 mb-3">
                   <input
                     type="number"
                     class="form-control"
@@ -188,7 +235,7 @@
               <button id="tienLuong" class="btn btn-primary">
                 Tính tiền lương
               </button>
-              <div class="bg-secondary-subtle rounded p-3 mt-4">
+              <div class="bg-body-tertiary rounded p-3 mt-4">
                 <i
                   class="fa-regular fa-hand-point-right text-warning fs-5 me-2"
                 ></i>
@@ -305,7 +352,7 @@
               <button id="tinhTrungBinh" class="btn btn-primary">
                 Tính trung bình
               </button>
-              <div class="bg-secondary-subtle rounded p-3 mt-4">
+              <div class="bg-body-tertiary rounded p-3 mt-4">
                 <i
                   class="fa-regular fa-hand-point-right text-warning fs-5 me-2"
                 ></i>
@@ -360,7 +407,7 @@
                 </div>
               </div>
               <div class="row">
-                <div class="col-6 mb-3">
+                <div class="col-4 mb-3">
                   <input
                     type="number"
                     class="form-control"
@@ -374,7 +421,7 @@
               <button id="quyDoiTien" class="btn btn-primary">
                 Quy đổi tiền
               </button>
-              <div class="bg-secondary-subtle rounded p-3 mt-4">
+              <div class="bg-body-tertiary rounded p-3 mt-4">
                 <i
                   class="fa-regular fa-hand-point-right text-warning fs-5 me-2"
                 ></i>
@@ -439,7 +486,7 @@
                 </div>
               </div>
               <div class="row">
-                <div class="col-6 mb-3">
+                <div class="col-4 mb-3">
                   <input
                     type="number"
                     class="form-control"
@@ -449,7 +496,7 @@
                     placeholder="Nhập chiều dài hình chữ nhật"
                   />
                 </div>
-                <div class="col-6 mb-3">
+                <div class="col-4 mb-3">
                   <input
                     type="number"
                     class="form-control"
@@ -463,7 +510,7 @@
               <button id="tinhDienTichChuVi" class="btn btn-primary">
                 Tính diện tích và chu vi
               </button>
-              <div class="bg-secondary-subtle rounded p-3 mt-4">
+              <div class="bg-body-tertiary rounded p-3 mt-4">
                 <i
                   class="fa-regular fa-hand-point-right text-warning fs-5 me-2"
                 ></i>
@@ -529,7 +576,7 @@
                 </div>
               </div>
               <div class="row">
-                <div class="col-6 mb-3">
+                <div class="col-4 mb-3">
                   <input
                     type="number"
                     class="form-control"
@@ -543,7 +590,7 @@
               <button id="tinhTong" class="btn btn-primary">
                 Tính tổng 2 ký số
               </button>
-              <div class="bg-secondary-subtle rounded p-3 mt-4">
+              <div class="bg-body-tertiary rounded p-3 mt-4">
                 <i
                   class="fa-regular fa-hand-point-right text-warning fs-5 me-2"
                 ></i>
