@@ -23,7 +23,13 @@ document.querySelector(".nav-link.active").click();
 document.getElementById("tienLuong").onclick = () => {
   let luongMotNgay = document.getElementById("luongMotNgay").value * 1;
   let soNgayLam = document.getElementById("soNgayLam").value * 1;
-  let tienLuong = luongMotNgay * soNgayLam;
+  let tienLuong = 0;
+
+  if (luongMotNgay <= 0 || soNgayLam <= 0) {
+    alert("Giá trị nhập vào không hợp lệ! Vui lòng nhập lại");
+  } else {
+    tienLuong = luongMotNgay * soNgayLam;
+  }
 
   document.querySelector(".bai1").innerHTML = tienLuong.toLocaleString("vi", {
     style: "currency",
@@ -48,12 +54,17 @@ document.getElementById("tinhTrungBinh").onclick = () => {
 
 document.getElementById("quyDoiTien").onclick = () => {
   let tienUSD = document.getElementById("tienUSD").value * 1;
-  let tienVND = tienUSD * 23500;
+  let tienVND = 0;
 
-  document.querySelector(".bai3").innerHTML = tienVND.toLocaleString("vi", {
-    style: "currency",
-    currency: "VND",
-  });
+  if (tienUSD <= 0) {
+    alert("Giá trị tiền USD nhập vào không hợp lệ! Vui lòng nhập lại");
+  } else {
+    tienVND = tienUSD * 23500;
+    document.querySelector(".bai3").innerHTML = tienVND.toLocaleString("vi", {
+      style: "currency",
+      currency: "VND",
+    });
+  }
 };
 
 // Bài 4
@@ -62,12 +73,13 @@ document.getElementById("tinhDienTichChuVi").onclick = () => {
   let chieuDai = document.getElementById("chieuDai").value * 1;
   let chieuRong = document.getElementById("chieuRong").value * 1;
 
-  if (chieuDai < chieuRong) {
-    alert("Chiều dài sao nhỏ hơn chiều rộng được hả chế 😑");
+  if (chieuDai <= 0 || chieuRong <= 0) {
+    alert("Giá trị nhập vào không hợp lệ! Vui lòng nhập lại");
+  } else if (chieuDai < chieuRong) {
+    alert("Giá trị chiều dài nhỏ hơn chiều rộng! Vui lòng nhập lại");
   } else {
     let dienTich = chieuDai * chieuRong;
     let chuVi = (chieuDai + chieuRong) * 2;
-
     document.querySelector(
       ".bai4"
     ).innerHTML = `Diện tích: ${dienTich}; Chu vi: ${chuVi}`;
@@ -86,6 +98,6 @@ document.getElementById("tinhTong").onclick = () => {
 
     document.querySelector(".bai5").innerHTML = tongHaiChuSo;
   } else {
-    alert("Nhập số có 2 chữ số mà chế 😑");
+    alert("Vui lòng nhập lại số có 2 chữ số");
   }
 };
