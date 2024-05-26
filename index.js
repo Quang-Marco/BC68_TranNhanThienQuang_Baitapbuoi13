@@ -1,3 +1,10 @@
+document.querySelectorAll(".nav-link").forEach((nav) => {
+  nav.onclick = () => {
+    document.querySelector("button[aria-selected='true'] span").innerHTML =
+      "📖";
+  };
+});
+
 // Bài 1
 
 document.getElementById("tienLuong").onclick = () => {
