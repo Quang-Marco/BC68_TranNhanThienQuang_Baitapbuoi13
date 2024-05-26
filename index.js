@@ -1,9 +1,22 @@
-document.querySelectorAll(".nav-link").forEach((nav) => {
-  nav.onclick = () => {
-    document.querySelector("button[aria-selected='true'] span").innerHTML =
-      "📖";
-  };
+// Function handleTabSwitch
+
+const tabButtons = document.querySelectorAll(".nav-link");
+const handleTabSwitch = (event) => {
+  tabButtons.forEach((nav) => {
+    // Đặt lại icon mặc định
+    let icon = nav.querySelector("span");
+    icon.innerHTML = "📒";
+  });
+  // Đặt icon active
+  event.target.querySelector("span").innerHTML = "📖";
+};
+
+tabButtons.forEach((nav) => {
+  nav.onclick = handleTabSwitch;
 });
+
+// Đảm bảo tab đầu tiên được active khi tải trang
+document.querySelector(".nav-link.active").click();
 
 // Bài 1
 
