@@ -15,8 +15,8 @@ tabButtons.forEach((nav) => {
   nav.onclick = handleTabSwitch;
 });
 
-// Đảm bảo tab đầu tiên được active khi tải trang
-document.querySelector(".nav-link.active").click();
+// // Đảm bảo tab đầu tiên được active khi tải trang
+// document.querySelector(".nav-link.active").click();
 
 // Bài 1
 
